@@ -1,17 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import { NotificationTitle } from './Notification.style';
 
-export const Notification = ({message}) => {
-    return (
-        <div>
-            <Notification message="There is no feedback"></Notification>
-        </div>
-    )
-}
-
+export const Notification = ({ message }) => {
+    return <NotificationTitle>{message}</NotificationTitle>;
+  };
 
 Notification.propTypes = {
     message: PropTypes.string.isRequired,
 };
-
-// h2

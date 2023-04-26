@@ -1,18 +1,14 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
-import React from "react";
-import PropTypes from 'prop-types';
-import { Button, List, ListEl } from "./FeedbackOptions.styled";
+import { Button } from "./FeedbackOptions.style";
 
 export const FeedbackOptions = ({ options, onBtnClick }) => (
-    <div>
+    <>
       {options.map(option => (
         <Button type="button" key={option} onClick={() => onBtnClick(option)}>
-          {option}
+          <span>{option}</span>
         </Button>
       ))}
-    </div>
+    </>
   );
   
   FeedbackOptions.propTypes = {
